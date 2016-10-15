@@ -18,6 +18,7 @@ angular.module('me2uApp')
     $rootScope.targetMsisdn = '';
     $rootScope.targetNetwork = '';
 
+
     $scope.onSuccess = function(data) {
         console.log(data);
         //Format: 0728092083_V
@@ -25,7 +26,7 @@ angular.module('me2uApp')
         $rootScope.targetMsisdn = arr[0];
         $rootScope.targetNetwork = arr[1];
 
-        $window.MediaStreamTrack.stop() 
+        $('#scan').hide();
         $location.path ('/amount');
     };
 

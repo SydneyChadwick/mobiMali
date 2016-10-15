@@ -30,4 +30,10 @@ angular.module('me2uApp')
         $location.path ('/show');
       }
     };
+
+    $scope.send = function () {
+      $('#scan').show();
+
+      $location.path ('/send');
+    }
   });

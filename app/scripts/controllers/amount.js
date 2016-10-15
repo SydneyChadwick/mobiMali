@@ -35,10 +35,14 @@ angular.module('me2uApp')
     };
 
     $scope.payMoneh = function () {
-      if($rootScope.targetNetwork !== $rootScope.sendNw) {
-        //TODO - not supported
+      if($rootScope.targetNetwork !== $rootScope.sendNw.substring(0, 1)) {
+        alert("Not supported!");
       } else {
-        //TODO make USSD call
+        var ussdString = "*141*6328*" + $rootScope.targetMsisdn + "*" + $rootScope.amount + "#";
+        alert(ussdString);
+        window.open('tel:' + ussdString, '_system');
+
+        $location.path ('/main');
       }
     }
   });
