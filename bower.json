@@ -11,9 +11,9 @@
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
-    /*"qrcode-generator": "git://github.com/kazuhikoarase/qrcode-generator.git#98032cc3e8",
+    "qrcode-generator": "git://github.com/kazuhikoarase/qrcode-generator.git#98032cc3e8",
     "angular-qrcode": "monospaced/angular-qrcode#~5.1.0",
-    "angular-qr-scanner": "0.1.0"*/
+    "angular-qr-scanner": "0.1.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
