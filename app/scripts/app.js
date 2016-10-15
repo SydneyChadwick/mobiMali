@@ -16,7 +16,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'monospaced.qrcode'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -39,6 +40,11 @@ angular
         templateUrl: 'views/receive.html',
         controller: 'ReceiveCtrl',
         controllerAs: 'receive'
+      })
+      .when('/show', {
+        templateUrl: 'views/show.html',
+        controller: 'ShowCtrl',
+        controllerAs: 'show'
       })
       .otherwise({
         redirectTo: '/'

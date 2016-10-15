@@ -1,1 +1,31 @@
-<p>This is the receive view.</p>
+<div ng-switch on="activeView.type" class="animate-switch-container">
+  <div class="animate-switch" ng-switch-default>
+    <form id="createQRForm" name="createQRForm" ng-submit="createQR()">
+
+      <div class="form-group">
+        <label for="msisdn">Phone number:</label>
+        <input name="msisdnIn" type="text" id="msisdnIn" ng-model="msisdn" ng-change="updateMsisdn(msisdn)"></input>
+      </div>
+
+      <div class="form-group">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle form-control" type="button" id="netowrkDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+            {{selectedNW}}
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="netwrkDropdown">
+            <li ng-click="selectNW ('MTN')"><a >MTN</a></li>
+            <li ng-click="selectNW ('Vodacom')"><a >Vodacom</a></li>
+            <li ng-click="selectNW ('CellC')"><a >CellC</a></li>
+            <li ng-click="selectNW ('Telkom Mobile')"><a >Telkom Mobile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary tiger-red-bck form-control" id="addProductButton">Add Product</a>
+    </form>
+  </div>
+
+  <div class="animate-switch" ng-switch-when="show">
+  </div>
+</div>
